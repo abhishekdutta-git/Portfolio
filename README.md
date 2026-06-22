@@ -2,7 +2,7 @@
 
 A sleek, modern, and highly responsive personal portfolio website built to showcase my projects, skills, and creative work as a Web Developer, Filmmaker, and Music Producer. Designed with a premium **Glassmorphism** aesthetic, fluid micro-animations, and a dynamic particle background.
 
-![Portfolio Preview](https://abhishekkumardutta.netlify.app/1200x600/06060e/8b5cf6?text=Portfolio+Preview)
+![Portfolio Preview](https://abhishekkumardutta.netlify.app/)
 
 ## ✨ Features
 
