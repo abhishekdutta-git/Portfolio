@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abhishek Kumar Dutta | Web Developer &amp; Creative Technologist</title>
+  <meta name="description"
+    content="Portfolio of Abhishek Kumar Dutta — B.Tech CSE (AI & ML) student, web developer, filmmaker and music producer. Explore projects, skills, and creative work." />
+  <meta name="keywords"
+    content="Abhishek Kumar Dutta, Web Developer, AI ML, Portfolio, Full Stack, Filmmaker, Music Producer" />
+  <meta name="author" content="Abhishek Kumar Dutta" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Abhishek Kumar Dutta | Portfolio" />
+  <meta property="og:description"
+    content="Web Developer • Filmmaker • Music Producer — Crafting digital experiences with code and creativity." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Animated Background Orbs -->
+  <div class="bg-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+  </div>
+
+  <!-- Particle Canvas -->
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" id="nav-logo">
+        Abhishek<span class="logo-accent">.</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Available for opportunities</span>
+      </div>
+      
+      <div class="hero-avatar">
+        <div class="avatar-glow"></div>
+        <img src="profilepic.jpg" alt="Abhishek Kumar Dutta" class="avatar-img" />
+      </div>
+
+      <h1 class="hero-title">
+        <span class="hero-greeting">Hi, I'm</span>
+        <span class="hero-name">Abhishek Kumar<br />Dutta</span>
+      </h1>
+      <div class="hero-roles">
+        <span class="role-prefix">I'm a </span>
+        <span class="typewriter" id="typewriter"></span>
+        <span class="cursor-blink">|</span>
+      </div>
+      <p class="hero-description">
+        Crafting digital experiences at the intersection of code, cinema, and sound.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary" id="hero-cta-projects">
+          <span>View My Work</span>
+          <i data-lucide="arrow-down-right" class="btn-icon"></i>
+        </a>
+        <a href="#contact" class="btn btn-ghost" id="hero-cta-contact">
+          <span>Let's Talk</span>
+          <i data-lucide="message-circle" class="btn-icon"></i>
+        </a>
+      </div>
+      <div class="hero-stats-wrapper">
+        <div class="hero-stats glass-card">
+          <div class="stat-item">
+            <div class="stat-icon-wrap">
+              <i data-lucide="folder-git-2" class="stat-icon"></i>
+            </div>
+            <div class="stat-info">
+              <div class="stat-value">
+                <span class="stat-number" data-count="3">0</span><span class="stat-plus">+</span>
+              </div>
+              <span class="stat-label">Live Projects</span>
+            </div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-icon-wrap">
+              <i data-lucide="layers" class="stat-icon"></i>
+            </div>
+            <div class="stat-info">
+              <div class="stat-value">
+                <span class="stat-number" data-count="8">0</span><span class="stat-plus">+</span>
+              </div>
+              <span class="stat-label">Technologies</span>
+            </div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-icon-wrap">
+              <i data-lucide="graduation-cap" class="stat-icon"></i>
+            </div>
+            <div class="stat-info">
+              <div class="stat-value">
+                <span class="stat-number" data-count="2028">0</span>
+              </div>
+              <span class="stat-label">Graduating</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">&lt;about&gt;</span>
+        <h2 class="section-title">About Me</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-card glass-card">
+          <div class="about-text">
+            <p>
+              I am a <strong>B.Tech Computer Science Engineering (AI &amp; ML)</strong> student at
+              <strong>KIIT University</strong> with a passion for building web applications,
+              creating films, and producing music.
+            </p>
+            <p>
+              I enjoy solving real-world problems through technology and continuously learning
+              modern development tools. My interests span across <strong>full-stack web development</strong>,
+              <strong>AI/ML</strong>, <strong>data analytics</strong>, <strong>filmmaking</strong>,
+              and <strong>digital content creation</strong>.
+            </p>
+          </div>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <i data-lucide="code-2" class="highlight-icon"></i>
+              <div>
+                <h3>Developer</h3>
+                <p>Building responsive web experiences with modern tools</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i data-lucide="film" class="highlight-icon"></i>
+              <div>
+                <h3>Filmmaker</h3>
+                <p>Telling stories through the lens of cinema</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i data-lucide="music" class="highlight-icon"></i>
+              <div>
+                <h3>Music Producer</h3>
+                <p>Crafting soundscapes and composing original music</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-education glass-card">
+          <div class="edu-icon-wrap">
+            <i data-lucide="graduation-cap" class="edu-icon"></i>
+          </div>
+          <h3>Education</h3>
+          <p class="edu-degree">B.Tech — Computer Science Engineering (AI &amp; ML)</p>
+          <p class="edu-school">KIIT University, Bhubaneswar</p>
+          <p class="edu-year">Expected Graduation: 2028</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section" id="skills">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">&lt;skills&gt;</span>
+        <h2 class="section-title">Tech Stack</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-grid">
+        <!-- Programming -->
+        <div class="skill-category glass-card" data-category="programming">
+          <div class="skill-cat-header">
+            <i data-lucide="terminal" class="skill-cat-icon"></i>
+            <h3>Programming</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">Java</span>
+            <span class="skill-pill">SQL</span>
+          </div>
+        </div>
+        <!-- Frontend -->
+        <div class="skill-category glass-card" data-category="frontend">
+          <div class="skill-cat-header">
+            <i data-lucide="layout" class="skill-cat-icon"></i>
+            <h3>Frontend</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill">HTML</span>
+            <span class="skill-pill">CSS</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">React</span>
+          </div>
+        </div>
+        <!-- Backend -->
+        <div class="skill-category glass-card" data-category="backend">
+          <div class="skill-cat-header">
+            <i data-lucide="server" class="skill-cat-icon"></i>
+            <h3>Backend</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill">Node.js</span>
+            <span class="skill-pill">Express.js</span>
+          </div>
+        </div>
+        <!-- Database -->
+        <div class="skill-category glass-card" data-category="database">
+          <div class="skill-cat-header">
+            <i data-lucide="database" class="skill-cat-icon"></i>
+            <h3>Database</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill">MySQL</span>
+          </div>
+        </div>
+        <!-- Tools -->
+        <div class="skill-category glass-card" data-category="tools">
+          <div class="skill-cat-header">
+            <i data-lucide="wrench" class="skill-cat-icon"></i>
+            <h3>Tools &amp; Platforms</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill">Git</span>
+            <span class="skill-pill">GitHub</span>
+            <span class="skill-pill">Vercel</span>
+            <span class="skill-pill">VS Code</span>
+          </div>
+        </div>
+        <!-- Other -->
+        <div class="skill-category glass-card" data-category="other">
+          <div class="skill-cat-header">
+            <i data-lucide="sparkles" class="skill-cat-icon"></i>
+            <h3>Other Skills</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill">AI/ML Fundamentals</span>
+            <span class="skill-pill">Data Analytics</span>
+            <span class="skill-pill">DaVinci Resolve</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section" id="projects">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">&lt;projects&gt;</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="projects-grid">
+        <!-- Project 1: QRForge -->
+        <article class="project-card glass-card" id="project-qrforge">
+          <div class="project-number">01</div>
+          <div class="project-content">
+            <h3 class="project-title">QRForge</h3>
+            <p class="project-subtitle">QR Code Generator</p>
+            <p class="project-desc">
+              A web application that generates QR codes instantly from text and URLs.
+              Clean, fast, and easy to use.
+            </p>
+            <div class="project-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://qrforge-rust.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link"
+                id="link-qrforge-demo">
+                <i data-lucide="external-link"></i>
+                <span>Live Demo</span>
+              </a>
+              <a href="https://github.com/abhishekdutta-git/QR-Forge" target="_blank" rel="noopener noreferrer"
+                class="project-link" id="link-qrforge-github">
+                <i data-lucide="github"></i>
+                <span>Source Code</span>
+              </a>
+            </div>
+          </div>
+          <div class="project-glow"></div>
+        </article>
+
+        <!-- Project 2: SWE Insider -->
+        <article class="project-card glass-card" id="project-swe">
+          <div class="project-number">02</div>
+          <div class="project-content">
+            <h3 class="project-title">SWE Insider</h3>
+            <p class="project-subtitle">Web Platform</p>
+            <p class="project-desc">
+              A modern, responsive web platform built with clean design principles
+              and intuitive user experience at the forefront.
+            </p>
+            <div class="project-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://sweinsider.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link"
+                id="link-swe-demo">
+                <i data-lucide="external-link"></i>
+                <span>Live Demo</span>
+              </a>
+              <a href="https://github.com/abhishekdutta-git/SWE" target="_blank" rel="noopener noreferrer"
+                class="project-link" id="link-swe-github">
+                <i data-lucide="github"></i>
+                <span>Source Code</span>
+              </a>
+            </div>
+          </div>
+          <div class="project-glow"></div>
+        </article>
+
+        <!-- Project 3: Roopkotha Production -->
+        <article class="project-card glass-card" id="project-roopkotha">
+          <div class="project-number">03</div>
+          <div class="project-content">
+            <h3 class="project-title">Roopkotha Production</h3>
+            <p class="project-subtitle">Production House Website</p>
+            <p class="project-desc">
+              Official website for my production house showcasing films, projects,
+              and creative work. A hub for cinematic storytelling.
+            </p>
+            <div class="project-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://roopkothaproduction.vercel.app/" target="_blank" rel="noopener noreferrer"
+                class="project-link" id="link-roopkotha-demo">
+                <i data-lucide="external-link"></i>
+                <span>Live Demo</span>
+              </a>
+              <a href="https://github.com/abhishekdutta-git/roopkothaproduction" target="_blank"
+                rel="noopener noreferrer" class="project-link" id="link-roopkotha-github">
+                <i data-lucide="github"></i>
+                <span>Source Code</span>
+              </a>
+            </div>
+          </div>
+          <div class="project-glow"></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="section" id="experience">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">&lt;experience&gt;</span>
+        <h2 class="section-title">Experience</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item glass-card">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Freelance Web Developer</h3>
+              <span class="timeline-badge">Current</span>
+            </div>
+            <p class="timeline-role">Independent Developer</p>
+            <p class="timeline-desc">
+              Built responsive websites and web tools using modern frontend technologies.
+              Deployed projects using Vercel and Netlify, delivering clean, performant
+              digital experiences for clients and personal ventures.
+            </p>
+            <div class="timeline-tech">
+              <span>HTML/CSS/JS</span>
+              <span>React</span>
+              <span>Vercel</span>
+              <span>Netlify</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">&lt;contact&gt;</span>
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info glass-card">
+          <h3>Let's build something together</h3>
+          <p>
+            Whether you have a project idea, a collaboration opportunity, or just want to say hi —
+            my inbox is always open. Let's create something amazing.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:work.abhi06@outlook.com" class="contact-link-item" id="contact-email">
+              <i data-lucide="mail" class="contact-icon"></i>
+              <div>
+                <span class="contact-link-label">Email</span>
+                <span class="contact-link-value">work.abhi06@outlook.com</span>
+              </div>
+            </a>
+            <a href="tel:+919955916956" class="contact-link-item" id="contact-phone-1">
+              <i data-lucide="phone" class="contact-icon"></i>
+              <div>
+                <span class="contact-link-label">Phone 1</span>
+                <span class="contact-link-value">+91 9955916956</span>
+              </div>
+            </a>
+            <a href="tel:+919431507668" class="contact-link-item" id="contact-phone-2">
+              <i data-lucide="phone" class="contact-icon"></i>
+              <div>
+                <span class="contact-link-label">Phone 2</span>
+                <span class="contact-link-value">+91 9431507668</span>
+              </div>
+            </a>
+            <a href="https://github.com/abhishekdutta-git" target="_blank" rel="noopener noreferrer"
+              class="contact-link-item" id="contact-github">
+              <i data-lucide="github" class="contact-icon"></i>
+              <div>
+                <span class="contact-link-label">GitHub</span>
+                <span class="contact-link-value">abhishekdutta-git</span>
+              </div>
+            </a>
+            <a href="https://linkedin.com/in/abhishekkumardutta" target="_blank" rel="noopener noreferrer"
+              class="contact-link-item" id="contact-linkedin">
+              <i data-lucide="linkedin" class="contact-icon"></i>
+              <div>
+                <span class="contact-link-label">LinkedIn</span>
+                <span class="contact-link-value">abhishekkumardutta</span>
+              </div>
+            </a>
+            <a href="https://instagram.com/cinewithabhi" target="_blank" rel="noopener noreferrer"
+              class="contact-link-item" id="contact-instagram">
+              <i data-lucide="instagram" class="contact-icon"></i>
+              <div>
+                <span class="contact-link-label">Instagram</span>
+                <span class="contact-link-value">@cinewithabhi</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-card glass-card">
+          <form class="contact-form" id="contact-form" action="https://formspree.io/f/xwvdkper" method="POST">
+            <div class="form-group">
+              <label for="form-name">Name</label>
+              <input type="text" id="form-name" name="name" placeholder="Your name" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="form-email">Email</label>
+              <input type="email" id="form-email" name="email" placeholder="your@email.com" required
+                autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="form-message">Message</label>
+              <textarea id="form-message" name="message" placeholder="Tell me about your project..." rows="5"
+                required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="form-submit">
+              <span>Send Message</span>
+              <i data-lucide="send" class="btn-icon"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <a href="#hero" class="footer-logo">
+          Abhishek<span class="logo-accent">.</span>
+        </a>
+        <div class="footer-socials">
+          <a href="https://github.com/abhishekdutta-git" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+            id="footer-github">
+            <i data-lucide="github"></i>
+          </a>
+          <a href="https://linkedin.com/in/abhishekkumardutta" target="_blank" rel="noopener noreferrer"
+            aria-label="LinkedIn" id="footer-linkedin">
+            <i data-lucide="linkedin"></i>
+          </a>
+          <a href="https://instagram.com/cinewithabhi" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+            id="footer-instagram">
+            <i data-lucide="instagram"></i>
+          </a>
+          <a href="mailto:work.abhi06@outlook.com" aria-label="Email" id="footer-email">
+            <i data-lucide="mail"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Abhishek Kumar Dutta. Crafted with passion.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
